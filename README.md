@@ -12,9 +12,9 @@ The dataset consists of flight data, including information about flight times, d
 Carefully engineered features that capture the complex dynamics of flight operations, delays, and interdependencies are used.
 
 ### Data Preprocessing
-1. **Timestamp Conversion**: Flight times are converted into timestamps using `convert_to_timedelta()`.
-2. **Feature Engineering**: Additional features are created, such as `tail_number_effect`, `RefDepDelay`, and others.
-3. **Data Reduction**: Airports with a low average daily flight count are filtered out to reduce data size.
+1. **Data Cleaning**: Missing values in key columns are addressed through calculated imputation strategies, ensuring accurate delay prediction.
+2. **Feature Engineering**: Temporal features, OD pair frequency encoding, and airline-specific delays are engineered to capture the operational dynamics of flights.
+3. **Data Filtering**: The dataset is filtered to focus on high-traffic airports, improving the model's ability to generalize to critical nodes in the air traffic network.
 
 ### Modeling Approaches
 Two primary modeling approaches are used in this project, each leveraging different feature sets to predict flight delays:
